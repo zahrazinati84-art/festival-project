@@ -54,6 +54,22 @@
         .feedback-emoji { font-size: 2rem; margin-top: 10px; display: none; }
 
         h1 { color: #d63384; }
+        .hint {
+  font-size: 22px;
+  color: #ff4081;
+  text-align: center;
+  margin-top: 20px;
+  opacity: 0;
+  animation: fadeIn 0.8s ease forwards, fadeOut 0.8s ease forwards 1.2s;
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+  to { opacity: 0; }
+}
     </style>
 </head>
 <body>
@@ -71,7 +87,9 @@
             <p>آماده هستید در دنیای دیجیتال یاد بگیرید؟</p>
             <button class="btn btn-start" onclick="startJourney()">شروع ماجراجویی ✨</button>
         </div>
-
+<div id="hint" class="hint">
+  روی تصاویر کلیک کن
+</div>
         <!-- ۲. صفحه تصاویر آموزشی -->
         <div id="screen-stages" class="screen">
             <div class="image-container" id="img-wrap" onclick="revealMessage()">
